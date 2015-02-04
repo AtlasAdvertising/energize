@@ -1,0 +1,178 @@
+/* Hero */
+
+// Hero Slider
+#hero-wrapper {
+	margin-bottom: 15px;
+	.banner {
+	}
+	.image {
+		height: 325px;
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+		@include breakpoint(large) {
+			height: auto;
+			max-height: 425px;
+		}
+		img {
+			left: 50%;
+			min-width: 1275px;
+			max-width: 400%;
+			position: absolute;
+			transform: translateX(-50%);
+			-webkit-transform: translateX(-50%);
+			@include breakpoint(large) {
+				position: static;
+				max-height: none;
+				transform: none;
+				-webkit-transform: none;
+				width: 100%;
+			}
+		}
+	}
+	.caption {
+		height: 100%;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		@include breakpoint(medium) {
+			width: 92%;
+		}
+		@include breakpoint(large) {
+			width: 90%;
+		}
+	}
+	.description {
+		background: rgba(255,255,255,0.8);
+		color: #000;
+		font-family: 'aleobold', serif;
+		font-size: 28px;
+		line-height: 1.1;
+		margin: 20% auto;
+		max-width: 95%;
+		padding: 10px 30px;
+		@include breakpoint(small) {
+			font-size: 45px;
+			max-width: 850px;
+			margin: 8% auto;
+		}
+		@include breakpoint(medium) {
+		}
+		@include breakpoint(large) {
+			max-width: 865px;
+			font-size: 55px;
+		}
+	}
+	.heroSubTitle {
+	}
+	.heroTitle {
+	}
+	.heroCaption {
+	}
+	.heroLink {
+		a {
+		}
+	}
+	.tparrows {
+	}
+	.tp-bullets {
+	}
+	.tp-bullets .bullet { 
+	}
+	.tp-bullets .bullet:before { 
+	}
+	.bullet.selected {
+	}
+	.slick-slide {
+	}
+	.slick-dots {
+	}
+	.slick-active {
+	}
+	.pagination-number {
+	}
+}
+
+
+// Pagination Icons
+
+#hero-wrapper {
+	ul.slick-dots {
+		bottom: 0;
+		margin: 0;
+		text-align: right;
+	}
+	li {
+		background: rgba(255,255,255,0.8);
+		height: 50px;
+		width: 50px;
+		.pagination-icon {
+			background-position: center center !important;
+			background-repeat: no-repeat;
+			background-size: contain !important;
+			height: 50px;
+			width: 50px;
+		}
+		&:nth-child(1) {
+			border-top: 2px solid $green;
+			.pagination-icon {
+				background: url(/Energize/images/ECI_icon_black_200.png);
+			}
+			&.slick-active {
+				.pagination-icon {
+					background: url(/Energize/images/ECI_icon_white_200.png);
+				}				
+			}
+		}
+		&:nth-child(2) {
+			border-top: 2px solid $purple;
+			.pagination-icon {
+				background: url(/Energize/images/Logistics_icon_black_200.png);
+			}
+			&.slick-active {
+				.pagination-icon {
+					background: url(/Energize/images/Logistics_icon_white_200.png);
+				}				
+			}
+		}
+		&:nth-child(3) {
+			border-top: 2px solid $orange;
+			.pagination-icon {
+				background: url(/Energize/images/Manufacturing_icon_black_200.png);
+			}
+			&.slick-active {
+				.pagination-icon {
+					background: url(/Energize/images/Manufacturing_icon_white_200.png);
+				}				
+			}
+		}
+		&:nth-child(4) {
+			border-top: 2px solid $blue;
+			.pagination-icon {
+				background: url(/Energize/images/IT_icon_black_200.png);
+			}
+			&.slick-active {
+				.pagination-icon {
+					background: url(/Energize/images/IT_icon_white_200.png);
+				}				
+			}
+		}
+		&:nth-child(5) {
+			border-top: 2px solid $maroon;
+			.pagination-icon {
+				background: url(/Energize/images/FoodProcessing_icon_black_200.png);
+			}
+			&.slick-active {
+				.pagination-icon {
+					background: url(/Energize/images/FoodProcessing_icon_white_200.png);
+				}				
+			}
+		}
+		&.slick-active {
+			background: #000;
+			border-top-left-radius: 3px;
+			border-top-right-radius: 3px;
+			border-top: none;
+		}
+	}
+}

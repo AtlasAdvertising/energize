@@ -1,0 +1,83 @@
+/* Widgets */
+
+// Images
+.widget-wrapper {
+	img {
+		max-width: 100%;
+	}
+}
+
+
+// Headers
+
+.widget-block h2,
+.SidebarTitle {
+	border-top: 4px solid $blue;
+	font-family: Helvetica W01;
+	font-size: 20px;
+	font-weight: 200;
+	margin-top: 20px;
+	padding-top: 10px;
+}
+
+
+// Photo Callout
+
+.SidebarText {
+	font-family: Helvetica W01;
+	font-size: 15px;
+	font-style: italic;
+	font-weight: 200;
+}
+
+
+// Downloads
+
+#Sidebar_Downloads {
+	.SidebarText {
+		display: none;
+	}
+	.SidebarList ul {
+		@include list;
+		a {
+			color: $blue;
+			&:hover {
+				color: $red;
+			}
+		}
+		li {
+			display: block;
+			margin: 0px !important;
+			line-height: 18px;
+			padding: 10px 0;
+		}	
+	}
+	.SidebarListIcon {
+		float: left;
+		padding: 3px 10px 3px 0px;
+	}
+	.SidebarListMyFavorites {
+		float: right;
+		padding-right: 5px;
+		width: 16px;
+	}
+}
+
+
+// Quick Links
+
+.LinksList {
+	@include list;
+	li {
+		display: block;
+		line-height: 18px;
+		margin: 0px !important;
+		padding: 10px 0;
+		a {
+			color: $blue;
+			&:hover {
+				color: $red;
+			}
+		}
+	}
+}

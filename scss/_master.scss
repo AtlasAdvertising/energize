@@ -1,0 +1,58 @@
+/* master */
+
+form {
+	-webkit-transform: translateZ(0);
+}
+
+a {
+	@include link-hover;
+}
+
+body {
+	.MobileMenu {
+		.MobileMenuPlaceholder {
+			display: none;
+		}
+		.MobileMenuButton {
+			top: 12px; 
+			right: 5px;
+			background: none; 
+			font-size: 36px; 
+			height: auto; 
+			width: auto; 
+			padding: 5px 10px; 
+			&:before {
+				content: "\f0c9";
+				font-family: "FontAwesome";
+				color: $green;
+				font-size: 28px;
+			}
+			@include breakpoint(small) {
+				top: 15px; 
+				right: 50px;
+			}
+			@include breakpoint(medium) {
+				display: none;
+			}
+		}
+	}
+	.MobileMenuWrapper {
+		#searchbtn-mobile {
+			height: 28px;
+		}
+		.mobile-list {
+			margin: 0; 
+			padding: 10px 0 0 0; 
+			list-style: none; 
+			border-top: 1px solid rgba(0,0,0,0.25);
+			li {
+				display: inline-block; 
+				padding: 5px;
+				a {
+					padding: 5px;
+				}
+			}
+		}
+	}
+
+}

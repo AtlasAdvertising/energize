@@ -1,0 +1,85 @@
+/* Secondary */
+
+#secondary-main-content {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: 'Helvetica W01';
+	}
+	h1,
+	h2 {
+		font-weight: 200;
+	}
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-weight: 700;
+	}
+	h1 {
+		font-size: 30px;
+	}
+	h2 {
+		font-size: 20px;
+	}
+	h3 {
+		font-size: 15;
+	}
+	h4 {
+		font-size: 14px;
+	}
+	h6 {
+		font-size: 12px;
+	}
+}
+
+
+// Page Title
+
+#secondary-header-image {
+	background: url(/Energize/images/secondary-header-background.png);
+	height: 93px;
+}
+
+.section-header-repeater {
+	color: $blue;
+	font-family: 'aleobold';
+	font-size: 40px;
+	padding: 35px 50px 0;
+}
+
+
+// My Fav's
+
+.PageUtility {
+	top: -28px;
+	.PageUtility_Wrapper {
+		width: 290px;
+	}
+	#Utility_MyFavorites, 
+	#Utility_AddPage, 
+	#Utility_Print,
+	#Utility_Share {
+		border: none !important;
+		color: $blue;
+		font-family: 'Helvetica W01';
+		padding: 7px 2px 8px 1px;
+		&:after {
+			content: "::";
+			padding: 0 5px;
+		}
+		.ImgBg {
+			display: none;
+		}
+		a {
+			color: $blue;
+		}
+	}
+	#Utility_Share:after {
+		content: "";
+	}
+}
+

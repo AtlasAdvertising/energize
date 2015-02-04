@@ -1,0 +1,196 @@
+/* Home */
+
+// Web Part Headers
+#home-page-content h2,
+#home-page-content .Title {
+	@extend %header;
+	display: block;
+}
+
+
+// Welcome Area
+
+#welcome-map {
+	position: static;
+	@include breakpoint(small) {
+		height: 275px;
+	}
+	@include breakpoint(medium) {
+		height: 340px;
+	}
+	img {
+		max-width: 100%;
+		@include breakpoint(small) {
+			height: 275px;
+			left: 30%;
+			max-width: none;
+			position: absolute;
+			transform: translateX(-70%);
+			-webkit-transform: translateX(-70%);
+		}
+		@include breakpoint(medium) {
+			height: auto;
+		}
+		@include breakpoint(large) {
+			left: -18%;
+						transform: translateX(18%);
+			-webkit-transform: translateX(18%);
+		}
+	}
+}
+
+#welcome-text {
+
+}
+
+
+// County Profiles
+
+#county-teasers-wrapper {
+	color: #fff;
+	.teaser {
+		margin: 0 2% 2% 0;
+		position: relative;
+		float: left;
+		width: 18%;
+		&:nth-child(6) {
+			clear: left;
+		}
+	}
+	.lower-overlay {
+		bottom: -108px;
+		visibility: hidden;
+		height: 108px;
+		position: absolute;
+		width: 100%;
+	}
+	.title {
+		bottom: 0;
+		position: absolute;
+		width: 100%;
+		font-family: 'Helvetica W01';
+		font-size: 16px;
+		font-weight: 700;
+		padding: 5px 0;
+		text-align: center;
+	}
+	.image {
+		// width: 100%;
+		img {
+			width: 100%;
+		}
+	}
+	.teaser {
+		&:nth-child(1) .title,
+		&:nth-child(7) .title {
+			background: $green;
+		}
+		&:nth-child(2) .title,
+		&:nth-child(8) .title {
+			background: $red;
+		}
+		&:nth-child(3) .title,
+		&:nth-child(9) .title {
+			background: $orange;
+		}
+		&:nth-child(4) .title,
+		&:nth-child(10) .title {
+			background: $blue;
+		}
+		&:nth-child(5) .title {
+			background: $purple;
+		}
+		&:nth-child(6) .title {
+			background: $maroon;
+		}
+	}
+	.overlay {
+	}
+}
+
+
+// Hover for Counties
+
+#county-teasers-wrapper {
+	.teaser:hover {
+		.lower-overlay {
+			bottom: 0;
+			visibility: visible;
+		}
+		.title {
+			top: 0;
+		}
+	}
+}
+
+
+// County Buttons
+
+#county-teasers-wrapper {
+	.description {
+		a {
+			color: #fff;
+			font-family: 'Helvetica W01';
+			font-size: 13px;
+			font-weight: 700;
+			background: $black;
+			border-radius: 4px;
+			margin: 15px auto 0;
+			display: block;
+			padding: 5px 0;
+			text-align: center;
+			width: 90%;
+
+		}
+		br {
+			display: none;
+		}
+	}
+}
+
+
+// Partner Carousel
+
+.partner-slide {
+	display: table !important;
+	height: 100px !important;
+	a {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		img {
+			display: inline-block;
+			max-width: 85%;
+		}
+	}
+}
+
+
+// Sites and Buildings
+
+#sites-and-buildings {
+	img {
+		max-width: 100%;
+	}
+}
+
+
+// Success Stories
+
+#successSlider .rsSlide {
+	.successStory {
+		overflow: hidden;
+		min-height: 250px;
+		.Image {
+			float: left;
+		}
+		.Image {
+			margin-right: 15px;
+			width: 269px;
+		}
+		.Title {
+			padding-bottom: 15px;
+			width: 66%;
+		}
+	}
+}

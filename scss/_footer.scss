@@ -1,0 +1,400 @@
+/* Footer */
+
+footer {
+	background: $green;
+	box-shadow: 0px -3px 4px 0px rgba(0, 0, 0, 0.36);
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	padding-top: 37px;
+	position: relative;
+	@include breakpoint(medium) {
+		padding-top: 0;
+	}
+}
+
+footer {
+	#footer-top {
+		#footerContent {
+			#footerOffice {
+				color: $red;
+				@include breakpoint(medium) {
+					margin-bottom: 0;
+				}
+				span {
+					color: #fff;
+					font-weight: bold;
+				}
+			}
+			.OfficeName {
+				font-size: 14px;
+				font-weight: bold;
+				color: #fff;
+			}
+			.OfficeAddress,
+			.OfficePhone,
+			.OfficeEmail {
+				line-height: 25px;
+				@include breakpoint(small) {
+					clear: none;
+				}
+			}
+			.OfficeAddress,
+			.OfficePhone {
+				margin-right: 15px;
+			}				
+			.OfficeAddress {
+				color: $red;
+				font-size: 13px;
+			}
+			.OfficePhone {
+				color: $red;
+				font-size: 13px;
+				font-weight: normal;
+			}
+			.OfficeEmail {
+				font-size: 13px;
+				font-weight: normal;
+				color: $red;
+				&:hover {
+					color: #fff;
+					text-decoration: none;
+				}
+			}
+			#email-signup {
+				margin: 0 0 20px;
+				@include breakpoint(medium) {
+					margin: 0;
+				}
+			}
+			#signupForm {
+				.footer-header {
+					color: $red;
+					font-size: 16px;
+					margin-bottom: 10px;
+					font-weight: bold;
+					@include breakpoint(small) {
+						margin-bottom: 20px;
+					}
+				}
+				input#email {
+					@extend %input;
+					border-radius: 3px;
+					float: left;
+					margin-bottom: 10px;
+					width: 100%;
+					@include breakpoint(small) {
+						float: none;
+						margin-bottom: 5px;
+						width: 37%;
+					}
+					@include breakpoint(medium) {
+						width: 100%;
+					}
+				}
+				input#emailBtn {
+					@include button(#fff,$green,#fff,3px);
+					border: none;
+					clear: left;
+					display: block;
+					float: left;
+					font-weight: bold;
+					line-height: 16px;
+					padding: 8px 25px;
+					text-transform: none;
+					width: 100%;
+					&:hover {
+						color: $green;
+					}
+					@include breakpoint(small) {
+						clear: none;
+						float: none;
+						width: 37%;
+						padding: 8px 0;
+					}
+					@include breakpoint(medium) {
+						width: 100%;
+					}
+					@include breakpoint(large) {
+						padding: 8px 20px;
+					}
+				}
+			}
+			#copyright {
+				color: $red;
+				a {
+					color: #fff;
+					&:hover {
+						color: $red;
+					}
+				}
+			}
+			#footer-toggle {
+				color: #fff;
+				cursor: pointer;
+				font-weight: bold;
+			}
+			span#footerButton {
+				clear: both;
+				display: block;
+				padding-top: 20px;
+				position: relative;
+				text-align: center;
+				cursor: pointer;
+				color: #000000;
+				font-size: 14px;
+				&:before {
+					content: "";
+					border-top: 1px solid #2B5494;
+					position: absolute;
+					left: 15px;
+					top: 29px;
+					width: 44%;
+				}
+				&:after {
+					content: "";
+					border-top: 1px solid #2B5494;
+					position: absolute;
+					right: 15px;
+					top: 29px;
+					width: 44%;
+				}
+			}
+		}
+	}
+}
+
+
+// Footer Wrapper
+
+#footer-wrapper {
+	background: $footer-grey;
+	color: #fff;
+	font-family:'Helvetica W01';
+	font-size: 12px;
+	padding: 35px 0;
+	img {
+		width: 225px;
+		max-width: 100%;
+		display: block;
+		margin-bottom: 15px;
+	}
+	.footer-header {
+		font-size: 15px;
+		margin-bottom: 5px;
+		border-bottom: 2px solid $green;
+	}
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		margin: 15px 0;
+	}
+}
+
+
+// Press Releases
+
+.pressReleaseItem {
+	border-bottom: 1px solid #686868;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	a {
+		color: #fff;
+		&:hover {
+			color: $green;
+		}
+	}
+	.date {
+		font-size: 10px;
+		font-weight: 200;
+	}
+}
+
+
+// Useful Links
+
+a.useful-link {
+	border-bottom: 1px solid #868686;
+	color: #fff;
+	display: block;
+	margin: 5px 0;
+	padding: 10px 0;
+	position: relative;
+	&:hover {
+		color: $green;
+	}
+	&:after {
+		content: "\f054";
+		font-family: 'FontAwesome';
+		position: absolute;
+		right: 0;
+	}
+}
+
+
+// Contact Info
+
+#footer-wrapper .Office {
+	font-weight: 200;
+	h2 {
+		font-size: 12px;
+		font-weight: 700;
+		margin-bottom: 5px;
+	}
+	a {
+		color: #fff;
+		&:hover {
+			color: $green;
+		}
+	}
+}
+
+
+// Site Map Open/Close
+
+#openClose {
+	cursor: pointer;
+	font-weight: 700;
+	text-align: right;
+}
+
+
+// Copyright
+
+.copyright-wrapper {
+	align-items: center;
+	background: #000;
+	color: #fff;
+	display: flex;
+	font-family:'Helvetica W01';
+	font-size: 15px;
+	height: 90px;
+	a {
+		color: $green;
+		&:hover {
+			color: $orange;
+		}
+	}
+}
+
+
+// Site Map
+
+#sitemap-wrapper {
+	background: $sitemap-grey;
+	.sitemap {
+		display:none; 
+		margin: 45px 0 30px;
+		ul {
+			margin: 5px 0 0; 
+			padding: 0; 
+			list-style: none; 
+			text-align: left;
+			li {
+				&:nth-child(1) a:hover {
+					color: $green;
+				};
+				&:nth-child(2) a:hover {
+					color: $red;
+				};
+				&:nth-child(3) a:hover {
+					color: $orange;
+				};
+				&:nth-child(4) a:hover {
+					color: $blue;
+				};
+				&:nth-child(5) a:hover {
+					color: $purple;
+				};
+				&:nth-child(6) a:hover {
+					color: $maroon;
+				};
+				&:nth-child(7) a:hover {
+					color: $green;
+				};
+				&:nth-child(8) a:hover {
+					color: $red;
+				};
+				float: left;
+				margin: 0 2.5% 0 0;
+				width: 14%;
+				a {
+					color: $black;
+					font-size:15px; 
+					font-family: 'Avenir W01', sans-serif;
+					font-weight: 700;
+					&:hover {
+						color: $green; 
+					}
+				}
+				&:nth-child(1) ul {
+					border-top: 2px solid $green;
+					a:hover {
+						color: $green;
+					}
+				};
+				&:nth-child(2) ul {
+					border-top: 2px solid $red;
+					a:hover {
+						color: $red;
+					}
+				};
+				&:nth-child(3) ul {
+					border-top: 2px solid $orange;
+					a:hover {
+						color: $orange;
+					}
+				};
+				&:nth-child(4) ul {
+					border-top: 2px solid $blue;
+					a:hover {
+						color: $blue;
+					}
+				};
+				&:nth-child(5) ul {
+					border-top: 2px solid $purple;
+					a:hover {
+						color: $purple;
+					}
+				};
+				&:nth-child(6) ul {
+					border-top: 2px solid $maroon;
+					a:hover {
+						color: $maroon;
+					}
+				};
+				&:nth-child(7) ul {
+					border-top: 2px solid $green;
+					a:hover {
+						color: $green;
+					}
+				};
+				&:nth-child(8) ul {
+					border-top: 2px solid $red;
+					a:hover {
+						color: $red;
+					}
+				};
+				ul {
+					padding-top: 5px;
+					li {
+						float: none; 
+						width: 100%; 
+						a {
+							display: inline-block;
+							font-size:12px; 
+							font-weight: 400;
+							padding: 5px 0;
+							text-transform: none;
+							&:hover {
+								color: $green;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
