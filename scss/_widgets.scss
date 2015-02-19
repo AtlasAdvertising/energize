@@ -2,8 +2,13 @@
 
 // Images
 .widget-wrapper {
+	border-radius: 10px;
+	padding-bottom: 25px;
 	img {
 		max-width: 100%;
+	}
+	&.col-xs-12 {
+		background: #EEF1F2;
 	}
 }
 
@@ -49,7 +54,7 @@
 			display: block;
 			margin: 0px !important;
 			line-height: 18px;
-			padding: 10px 0;
+			padding: 5px 0;
 		}	
 	}
 	.SidebarListIcon {
@@ -59,7 +64,7 @@
 	.SidebarListMyFavorites {
 		float: right;
 		padding-right: 5px;
-		width: 16px;
+		width: 26px;
 	}
 }
 
@@ -72,12 +77,22 @@
 		display: block;
 		line-height: 18px;
 		margin: 0px !important;
-		padding: 10px 0;
+		padding: 5px 0;
 		a {
 			color: $blue;
 			&:hover {
 				color: $red;
 			}
 		}
+	}
+}
+
+
+// Connect With Us
+
+.Controls {
+	.fa {
+		cursor: pointer;
+		font-size: 24px;
 	}
 }

@@ -7,3 +7,12 @@
 .EditMode header .utility-wrapper {
 	height: 120px;
 }
+
+.EditableImageEdit .ImageSelectorHeader, 
+.EditButtons {
+	z-index: 2000;
+}
+
+.EditMode header {
+	position: static;
+}

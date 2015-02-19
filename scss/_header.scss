@@ -2,9 +2,22 @@
 
 header {
 	background: #000;
+	border-bottom: 4px solid #CBC8C7;
 	font-family: 'Roboto', sans-serif;
-	height: 105px;
+	height: 115px;
 	padding: 0;
+	position: relative;
+	transition: height 0.5s;
+	z-index: 1005;
+	#inner-header-wrapper {
+		background: #000;
+		height: 100%;
+		position: relative;
+		// z-index: 2;
+		@include breakpoint(medium) {
+			padding: 0 30px;
+		}
+	}
 	.searchBox {
 		right: -175px;
 		position: absolute;
@@ -97,10 +110,20 @@ header {
 	}
 }
 
+header .col-md-2 {
+	@include breakpoint(small) {
+		padding: 0;
+	}
+}
+
 #site-logo {
+	-webkit-align-items: center;
 	align-items: center;
-	display: flex;
-	height: 95px;
+	display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+	height: 111px;
 	width: 175px;
 	@include breakpoint(small) {
 		height: 105px;
@@ -108,7 +131,20 @@ header {
 	}
 	img {
 		max-width: 100%;
-		width: 250px;
+		width: 225px;
+	}
+	a {
+		height: 59px;
+		width: 155px;
+		background: url("/Energize/images/logo.png");
+		background-size: cover;
+		@include breakpoint(small) {
+		}
+		@include breakpoint(large) {
+			height: 86px;
+			width: 225px;
+		}
+		transition: height 0.5s, width 0.5s, background 0.5s;
 	}
 }
 

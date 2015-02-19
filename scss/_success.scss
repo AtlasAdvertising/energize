@@ -1,0 +1,62 @@
+/* Success Stories */
+
+
+// Home Page
+
+#successSlider .rsSlide {
+	.successStory {
+		overflow: hidden;
+		min-height: 250px;
+	}
+}
+
+#successSlider {
+	.rsBullet {
+		height: 12px !important;
+		width: 12px !important;
+	}
+}
+
+
+// Global
+
+.successStory {
+	.Image {
+		float: left;
+		margin-right: 15px;
+		width: 269px;
+	}
+	.Title {
+		padding-bottom: 15px !important;
+		width: 66%;
+		a {
+			color: $black;
+			&:hover {
+				color: $green;
+			}
+		}
+	}
+}
+
+
+// Success Stories Page
+
+#secondary-main-content .successStory {
+	clear: left;
+	margin-bottom: 35px;
+	.Title {
+		@extend %header;
+		border: none;
+	}
+}
+
+.go-back-link {
+	display: block;
+	margin: 10px 0 35px;
+	&:before {
+		content: "\f0a5";
+		font-family: "FontAwesome";
+		font-size: 20px;
+		padding-right: 5px;
+	}
+}

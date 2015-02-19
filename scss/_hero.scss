@@ -3,6 +3,8 @@
 // Hero Slider
 #hero-wrapper {
 	margin-bottom: 15px;
+	overflow: hidden;
+	width: 100%;
 	.banner {
 	}
 	.image {
@@ -52,7 +54,7 @@
 		max-width: 95%;
 		padding: 10px 30px;
 		@include breakpoint(small) {
-			font-size: 45px;
+			font-size: 38px;
 			max-width: 850px;
 			margin: 8% auto;
 		}
@@ -60,7 +62,7 @@
 		}
 		@include breakpoint(large) {
 			max-width: 865px;
-			font-size: 55px;
+			font-size: 46px;
 		}
 	}
 	.heroSubTitle {
@@ -100,7 +102,10 @@
 	ul.slick-dots {
 		bottom: 0;
 		margin: 0;
-		text-align: right;
+		@include breakpoint(small) {
+			padding: 0 50px 0 0;
+			text-align: right;
+		}
 	}
 	li {
 		background: rgba(255,255,255,0.8);
@@ -170,8 +175,8 @@
 		}
 		&.slick-active {
 			background: #000;
-			border-top-left-radius: 3px;
-			border-top-right-radius: 3px;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
 			border-top: none;
 		}
 	}

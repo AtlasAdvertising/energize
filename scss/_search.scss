@@ -1,7 +1,44 @@
 /* Search */
 
+
+// Search Page
+
+#secondaryWrapper.search {
+	padding: 35px 0;
+}
+
+
 // Hidden Search Area
 
 .search-bar {
+	background: #DEDEDE;
+	border-radius: 2px;
 	display: none;
+	margin-right: 15px;
+	padding: 5px;
+	position: absolute;
+	right: 0;
+	text-align: right;
+	top: 100%;
+	width: 285px;
+	z-index: 1;
+}
+
+.search-close,
+.search-wrapper {
+	display: inline-block;
+}
+
+.search-close {
+	padding: 0 3px 1px 0;
+}
+
+input#searchbtn {
+	display: none;
+}
+
+input#search {
+	margin-right: 2px;
+	outline: none;
+	width: 243px;
 }

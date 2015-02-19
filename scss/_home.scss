@@ -5,13 +5,20 @@
 #home-page-content .Title {
 	@extend %header;
 	display: block;
+	margin-top: 45px;
+	@include breakpoint(small) {
+		margin-top: 20px;
+	}
 }
 
 
 // Welcome Area
 
+#welcome-wrapper {
+	overflow: hidden;
+}
+
 #welcome-map {
-	position: static;
 	@include breakpoint(small) {
 		height: 275px;
 	}
@@ -19,55 +26,169 @@
 		height: 340px;
 	}
 	img {
-		max-width: 100%;
+		height: 275px;
+		left: 70%;
+		max-width: none;
+		position: absolute;
+		transform: translateX(-70%);
+		-webkit-transform: translateX(-70%);
 		@include breakpoint(small) {
-			height: 275px;
-			left: 30%;
-			max-width: none;
-			position: absolute;
-			transform: translateX(-70%);
-			-webkit-transform: translateX(-70%);
+			left: 100%;
+			transform: translateX(-100%);
+			-webkit-transform: translateX(-100%);
 		}
 		@include breakpoint(medium) {
 			height: auto;
+		}		
+	}
+}
+
+#welcome-map {
+	.button {
+		top: 20px;
+		right: 80px;
+		@include breakpoint(small) {
+			top: -20px;
 		}
-		@include breakpoint(large) {
-			left: -18%;
-						transform: translateX(18%);
-			-webkit-transform: translateX(18%);
+		a {
+			@include grow-shadow;
+			background: #000;
+			border-radius: 10px;
+			color: #fff;
+			display: block;
+			font-family:'Helvetica W01';
+			font-size: 20px;
+			font-weight: 700;
+			margin-top: 20px;
+			padding: 10px 0;
+			text-align: center;
+			width: 130px;
+		}
+	}
+	h2,
+	.button {
+		position: absolute;
+		z-index: 1;
+	}
+	h2 {
+		margin-top: 0;
+		position: static;
+		@include breakpoint(small) {
+			position: absolute;
+		}
+	}
+}
+
+
+#welcome-text,
+#sites-wrapper {
+	.button {
+		a {
+			@include grow-shadow;
+			background: #000;
+			border-radius: 10px;
+			color: #fff;
+			display: block;
+			font-family:'Helvetica W01';
+			font-size: 20px;
+			font-weight: 700;
+			margin-top: 20px;
+			padding: 10px 0;
+			text-align: center;
+			width: 130px;
 		}
 	}
 }
 
 #welcome-text {
+	margin-bottom: 45px;
+	@include breakpoint(small) {
+		margin-bottom: 0;
+	}
+}
 
+#sites-wrapper .button a {
+	font-size: 16px !important;
+}
+
+.button-wrapper {
+	bottom: 27%;
+	position: absolute;
+	text-align: center;
+	width: 92%;
+	.button {
+		display: inline-block !important;
+	}
+}
+
+#welcome-text h2 {
+	border-top: none;
+	font-size: 30px;
+	font-weight: 200;
+	margin-top: 285px;
+	@include breakpoint(small) {
+		margin-top: 0;
+	}
 }
 
 
 // County Profiles
 
+#counties-wrapper {
+	box-shadow: 0px -5px 10px 0px #ccc;
+	padding: 15px 0 25px;
+	position: relative;
+	h2 {
+		display: inline-block;
+		width: 50%;
+	}
+}
+
 #county-teasers-wrapper {
 	color: #fff;
 	.teaser {
-		margin: 0 2% 2% 0;
+		margin: 0 0 2% 0;
+		overflow: hidden;
 		position: relative;
 		float: left;
-		width: 18%;
-		&:nth-child(6) {
-			clear: left;
+		width: 100%;
+		@media (min-width: 385px) { 
+			margin: 0 2% 2% 0;
+			width: 48%;
+		}
+		@include breakpoint(small) {
+			width: 18%;
+			&:nth-child(6) {
+				clear: left;
+			}
+		}
+		.teaser-wrapper-link {
+			@include breakpoint(small) {
+			  cursor: default;
+				pointer-events: none;
+			}
 		}
 	}
-	.lower-overlay {
-		bottom: -108px;
-		visibility: hidden;
-		height: 108px;
+	.overlay {
+		bottom: 0;
+		height: 80px;
 		position: absolute;
 		width: 100%;
+		@include breakpoint(small) {
+			height: 140px;
+			top: 77px;
+			transition: top 1s;
+		}
+		@include breakpoint(medium) {
+			top: 108px;
+		}
+		@include breakpoint(large) {
+			height: 172px;
+			top: 140px;
+		}
 	}
 	.title {
-		bottom: 0;
-		position: absolute;
-		width: 100%;
+		color: #fff;
 		font-family: 'Helvetica W01';
 		font-size: 16px;
 		font-weight: 700;
@@ -81,26 +202,26 @@
 		}
 	}
 	.teaser {
-		&:nth-child(1) .title,
-		&:nth-child(7) .title {
+		&:nth-child(1) .overlay,
+		&:nth-child(7) .overlay {
 			background: $green;
 		}
-		&:nth-child(2) .title,
-		&:nth-child(8) .title {
+		&:nth-child(2) .overlay,
+		&:nth-child(8) .overlay {
 			background: $red;
 		}
-		&:nth-child(3) .title,
-		&:nth-child(9) .title {
+		&:nth-child(3) .overlay,
+		&:nth-child(9) .overlay {
 			background: $orange;
 		}
-		&:nth-child(4) .title,
-		&:nth-child(10) .title {
+		&:nth-child(4) .overlay,
+		&:nth-child(10) .overlay {
 			background: $blue;
 		}
-		&:nth-child(5) .title {
+		&:nth-child(5) .overlay {
 			background: $purple;
 		}
-		&:nth-child(6) .title {
+		&:nth-child(6) .overlay {
 			background: $maroon;
 		}
 	}
@@ -113,12 +234,10 @@
 
 #county-teasers-wrapper {
 	.teaser:hover {
-		.lower-overlay {
-			bottom: 0;
-			visibility: visible;
-		}
-		.title {
-			top: 0;
+		.overlay {
+			@include breakpoint(small) {
+				top: 0;
+			}
 		}
 	}
 }
@@ -135,12 +254,17 @@
 			font-weight: 700;
 			background: $black;
 			border-radius: 4px;
-			margin: 15px auto 0;
+			margin: 5px auto 20px;
 			display: block;
 			padding: 5px 0;
 			text-align: center;
 			width: 90%;
-
+			@include breakpoint(small) {
+				margin: 15px auto 0;
+			}
+			&:hover {
+				color: $green;
+			}
 		}
 		br {
 			display: none;
@@ -174,23 +298,36 @@
 	}
 }
 
+#success-and-sites-wrapper {
+	box-shadow: inset 0px 5px 10px 0px #ccc;
+	padding: 25px 0 0;
+}
 
-// Success Stories
 
-#successSlider .rsSlide {
-	.successStory {
-		overflow: hidden;
-		min-height: 250px;
-		.Image {
-			float: left;
+// Investor Carousel
+
+#investors-wrapper {
+	h2 {
+		margin-bottom: 0;
+	}
+	#partner-carousel {
+		padding-top: 30px;
+	}
+	.prev-button, 
+	.next-button {
+		color: #B1B1B1;
+		font-size: 35px;
+	}
+	.prev-button {
+		left: 0;
+		@include breakpoint(small) {
+			left: -30px;
 		}
-		.Image {
-			margin-right: 15px;
-			width: 269px;
-		}
-		.Title {
-			padding-bottom: 15px;
-			width: 66%;
+	}
+	.next-button {
+		right: 0;
+		@include breakpoint(small) {
+			right: -30px;
 		}
 	}
 }
