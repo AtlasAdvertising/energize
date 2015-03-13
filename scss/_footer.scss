@@ -197,6 +197,20 @@ footer {
 	}
 }
 
+// Social Media Icons 
+
+#social-media-footer li {
+  margin-right: 25px;
+  display: inline-block;
+  a {
+  	color: #fff;
+  	font-size: 22px;
+  	&:hover {
+  		color: $green;
+  	}
+  }
+}
+
 
 // Press Releases
 

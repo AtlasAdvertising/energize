@@ -178,6 +178,9 @@
 			color: $green !important;
 		}
 	}
+	.nav-wrapper ul li ul {
+		background-color: $green;
+	}
 }
 
 .red-theme {
@@ -214,6 +217,9 @@
 		a:hover {
 			color: $red !important;
 		}
+	}
+	.nav-wrapper ul li ul {
+		background-color: $red;
 	}
 }
 
@@ -252,6 +258,9 @@
 			color: $orange !important;
 		}
 	}
+	.nav-wrapper ul li ul {
+		background-color: $orange;
+	}
 }
 
 .blue-theme {
@@ -288,6 +297,9 @@
 		a:hover {
 			color: $blue !important;
 		}
+	}
+	.nav-wrapper ul li ul {
+		background-color: $blue;
 	}
 }
 
@@ -326,6 +338,9 @@
 			color: $purple !important;
 		}
 	}
+	.nav-wrapper ul li ul {
+		background-color: $purple;
+	}
 }
 
 .maroon-theme {
@@ -362,5 +377,8 @@
 		a:hover {
 			color: $maroon !important;
 		}
+	}
+	.nav-wrapper ul li ul {
+		background-color: $maroon;
 	}
 }

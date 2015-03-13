@@ -260,10 +260,12 @@
 				z-index: 10;
 				li {
 					margin-bottom: 0;
+					width: 100%;
 					a {
 						background: transparent;
 						border: 0;
 						color: #fff !important;
+						width: 100%;
 						&:hover {
 							background: #fff !important;
 						}

@@ -65,11 +65,14 @@
 	margin: 10px 0 20px;
 	.staffImage {
 		padding-left: 0;
+		img {
+		  max-width: 100%;
+		}
 	}
 	h3 {
 		font-size: 16px;
 		font-weight: 700;
-		margin: 10px 0 5px;
+		margin: 0 0 5px;
 	}
 	h4 {
 		font-style: italic;
@@ -99,6 +102,10 @@
 	input,
 	textarea {
 		width: 100%;
+	}
+	#form-phone-wrapper input {
+	  text-align: center;
+	  width: 45px !important;
 	}
 	.CheckBoxListField {
 		margin: 0 0 25px;
